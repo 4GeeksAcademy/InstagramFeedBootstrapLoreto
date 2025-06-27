@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram Feed</title>
+
+  <!-- ✅ Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ✅ Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body class="bg-light">
+
+  <!-- ✅ Navbar -->
+  <nav class="navbar bg-white border-bottom px-4 py-2 d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-2">
+      <i class="bi bi-instagram fs-4"></i>
+      <span class="fs-5 fw-bold">Instagram</span>
+    </div>
+
+    <div class="d-flex align-items-center gap-3">
+      <!-- Create post button -->
+      <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createModal">
+        Create a new post
+      </button>
+
+      <!-- Settings dropdown -->
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
+          <i class="bi bi-gear-fill"></i>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">Accessibility</a></li>
+          <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="text-center my-3">
+    <i class="bi bi-square fs-4 mx-2" id="fullPostBtn" style="cursor:pointer;"></i>
+    <i class="bi bi-grid-3x3-gap-fill fs-4 mx-2" id="collageBtn" style="cursor:pointer;"></i>
+  </div>
+
+  <div class="container" id="postView">
+    <div class="card mx-auto" style="max-width: 600px;">
+      <div class="card-header d-flex justify-content-between">
+        <strong>My Crazy dog Spark!</strong>
+        <small>08/26</small>
+      </div>
+      <img src="https://images.dog.ceo/breeds/beagle/n02088364_11136.jpg" class="card-img-top"
+        alt="this image shows a dog">
+      <div class="card-body">
+        <p><strong>204 Likes</strong></p>
+        <p>This is an example of a very good photo that you can post on Instagram</p>
+      </div>
+    </div>
+    <div class="card mx-auto" style="max-width: 600px;">
+      <div class="card-header d-flex justify-content-between">
+        <strong>My Crazy dog Spark!</strong>
+        <small>08/26</small>
+      </div>
+      <img src="https://images.dog.ceo/breeds/beagle/n02088364_11136.jpg" class="card-img-top"
+        alt="this image shows a dog">
+      <div class="card-body">
+        <p><strong>204 Likes</strong></p>
+        <p>This is an example of a very good photo that you can post on Instagram</p>
+      </div>
+    </div>
+    <div class="card mx-auto" style="max-width: 600px;">
+      <div class="card-header d-flex justify-content-between">
+        <strong>My Crazy dog Spark!</strong>
+        <small>08/26</small>
+      </div>
+      <img src="https://images.dog.ceo/breeds/beagle/n02088364_11136.jpg" class="card-img-top"
+        alt="this image shows a dog">
+      <div class="card-body">
+        <p><strong>204 Likes</strong></p>
+        <p>This is an example of a very good photo that you can post on Instagram</p>
+      </div>
+    </div>
+  </div>
+  <div class="container" id="collageView" style="display: none;">
+    <div class="row g-2">
+      <div class="col-4"><img src="https://picsum.photos/id/237/300/300" class="img-fluid" alt="Collage image 1"></div>
+      <div class="col-4"><img src="https://picsum.photos/id/1011/300/300" class="img-fluid" alt="Collage image 2"></div>
+      <div class="col-4"><img src="https://picsum.photos/id/1025/300/300" class="img-fluid" alt="Collage image 3"></div>
+      <div class="col-4"><img src="https://picsum.photos/id/1062/300/300" class="img-fluid" alt="Collage image 4"></div>
+      <div class="col-4"><img src="https://picsum.photos/id/1074/300/300" class="img-fluid" alt="Collage image 5"></div>
+      <div class="col-4"><img src="https://picsum.photos/id/1080/300/300" class="img-fluid" alt="Collage image 6"></div>
+    </div>
+  </div>
+  <!-- Modal window at the end to not messing up my code when trying to open a new window  <div class="modal fade" id="createModal" tabindex="-1"> -->
+  <div class="modal fade" id="createModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Create a new post</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <label for="caption" class="form-label">Caption:</label>
+          <textarea class="form-control mb-3" id="caption" placeholder="Add the caption of your post here"></textarea>
+          <div class="d-flex gap-2">
+            <button class="btn btn-outline-secondary"><i class="bi bi-camera"></i></button>
+            <button class="btn btn-outline-secondary"><i class="bi bi-geo-alt"></i></button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button class="btn btn-success">Publish</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🟩 Optional Modal (for your "Create a new post" button) -->
+  <!-- You can add this later if needed -->
+
+  <!-- ✅ Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const postView = document.getElementById("postView");
+    const collageView = document.getElementById("collageView");
+    const fullPostBtn = document.getElementById("fullPostBtn");
+    const collageBtn = document.getElementById("collageBtn");
+
+    fullPostBtn.addEventListener("click", () => {
+      postView.style.display = "block";
+      collageView.style.display = "none";
+      fullPostBtn.classList.add("text-primary");
+      collageBtn.classList.remove("text-primary");
+    });
+
+    collageBtn.addEventListener("click", () => {
+      postView.style.display = "none";
+      collageView.style.display = "block";
+      collageBtn.classList.add("text-primary");
+      fullPostBtn.classList.remove("text-primary");
+    });
+  </script>
+
+</body>
+
+</html>
