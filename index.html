@@ -6,16 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Instagram Feed</title>
 
-  <!-- ✅ Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- ✅ Bootstrap Icons -->
+  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </head>
 
 <body class="bg-light">
 
-  <!-- ✅ Navbar -->
+  <!-- Navbar -->
   <nav class="navbar bg-white border-bottom px-4 py-2 d-flex justify-content-between align-items-center">
     <div class="d-flex align-items-center gap-2">
       <i class="bi bi-instagram fs-4"></i>
@@ -49,15 +49,15 @@
     <i class="bi bi-square fs-4 mx-2" id="fullPostBtn" style="cursor:pointer;"></i>
     <i class="bi bi-grid-3x3-gap-fill fs-4 mx-2" id="collageBtn" style="cursor:pointer;"></i>
   </div>
-
+  <!-- Creates a post with single view which is sowed in the main view of the website, and later it'is called by fullPostBtn ""-->
   <div class="container" id="postView">
     <div class="card mx-auto" style="max-width: 600px;">
+      <!-- I can put here my different posts -->
       <div class="card-header d-flex justify-content-between">
         <strong>My Crazy dog Spark!</strong>
         <small>08/26</small>
       </div>
-      <img src="https://images.dog.ceo/breeds/beagle/n02088364_11136.jpg" class="card-img-top"
-        alt="this image shows a dog">
+      <img src="https://smylepets.com/wp-content/uploads/2021/03/Beagle.png" class="card-img-top" alt="Dog image">
       <div class="card-body">
         <p><strong>204 Likes</strong></p>
         <p>This is an example of a very good photo that you can post on Instagram</p>
@@ -65,40 +65,59 @@
     </div>
     <div class="card mx-auto" style="max-width: 600px;">
       <div class="card-header d-flex justify-content-between">
-        <strong>My Crazy dog Spark!</strong>
+        <strong>The greatness of Croatia!</strong>
         <small>08/26</small>
       </div>
-      <img src="https://images.dog.ceo/breeds/beagle/n02088364_11136.jpg" class="card-img-top"
-        alt="this image shows a dog">
+      <img src="https://youthtimemag.com/wp-content/uploads/2022/04/shutterstock_662032261.jpg" class="card-img-top"
+        alt="Croatia image">
       <div class="card-body">
-        <p><strong>204 Likes</strong></p>
+        <p><strong>26985 Likes</strong></p>
         <p>This is an example of a very good photo that you can post on Instagram</p>
       </div>
     </div>
     <div class="card mx-auto" style="max-width: 600px;">
       <div class="card-header d-flex justify-content-between">
-        <strong>My Crazy dog Spark!</strong>
+        <strong>Cristiano Ronaldo</strong>
         <small>08/26</small>
       </div>
-      <img src="https://images.dog.ceo/breeds/beagle/n02088364_11136.jpg" class="card-img-top"
-        alt="this image shows a dog">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg"
+        class="card-img-top" alt="Soccer player">
       <div class="card-body">
         <p><strong>204 Likes</strong></p>
         <p>This is an example of a very good photo that you can post on Instagram</p>
       </div>
     </div>
   </div>
+
+  <!-- It creates the collage which I selected with Toggle Icons -->
   <div class="container" id="collageView" style="display: none;">
-    <div class="row g-2">
-      <div class="col-4"><img src="https://picsum.photos/id/237/300/300" class="img-fluid" alt="Collage image 1"></div>
-      <div class="col-4"><img src="https://picsum.photos/id/1011/300/300" class="img-fluid" alt="Collage image 2"></div>
-      <div class="col-4"><img src="https://picsum.photos/id/1025/300/300" class="img-fluid" alt="Collage image 3"></div>
-      <div class="col-4"><img src="https://picsum.photos/id/1062/300/300" class="img-fluid" alt="Collage image 4"></div>
-      <div class="col-4"><img src="https://picsum.photos/id/1074/300/300" class="img-fluid" alt="Collage image 5"></div>
-      <div class="col-4"><img src="https://picsum.photos/id/1080/300/300" class="img-fluid" alt="Collage image 6"></div>
+    <div class="row g-3">
+      <div class="col-4"><img src="https://smylepets.com/wp-content/uploads/2021/03/Beagle.png" class="img-fluid"
+          alt="Collage image 1" style="width:100%; height:300px; object-fit:cover; object-position:center;"></div>
+      <div class="col-4"><img src="https://youthtimemag.com/wp-content/uploads/2022/04/shutterstock_662032261.jpg"
+          class="img-fluid" alt="Collage image 2"
+          style="width:100%; height:300px; object-fit:cover; object-position:center;"></div>
+      <div class="col-4"><img
+          src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg"
+          class="img-fluid" alt="Collage image 3"
+          style="width:100%; height:300px; object-fit:cover; object-position:center;"></div>
+      <div class="col-4"><img src="https://picsum.photos/id/237/300/300" class="img-fluid" alt="Collage image 4"
+          style="width:100%; height:300px; object-fit:cover; object-position:center;"></div>
+      <div class="col-4"><img src="https://picsum.photos/id/1011/300/300" class="img-fluid" alt="Collage image 5"
+          style="width:100%; height:300px; object-fit:cover; object-position:center;"></div>
+      <div class="col-4"><img src="https://picsum.photos/id/1025/300/300" class="img-fluid" alt="Collage image 6"
+          style="width:100%; height:300px; object-fit:cover; object-position:center;"></div>
+      <div class="col-4"><img src="https://picsum.photos/id/1062/300/300" class="img-fluid" alt="Collage image 7"
+          style="width:100%; height:300px; object-fit:cover; object-position:center;"></div>
+      <div class="col-4"><img src="https://picsum.photos/id/1074/300/300" class="img-fluid" alt="Collage image 8"
+          style="width:100%; height:300px; object-fit:cover; object-position:center;"></div>
+      <div class="col-4"><img src="https://picsum.photos/id/1080/300/300" class="img-fluid" alt="Collage image 9"
+          style="width:100%; height:300px; object-fit:cover; object-position:center;"></div>
+
     </div>
   </div>
-  <!-- Modal window at the end to not messing up my code when trying to open a new window  <div class="modal fade" id="createModal" tabindex="-1"> -->
+  <!-- Modal window at the end to not messing up my code when I try opening a new window -->
   <div class="modal fade" id="createModal" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -122,10 +141,7 @@
     </div>
   </div>
 
-  <!-- 🟩 Optional Modal (for your "Create a new post" button) -->
-  <!-- You can add this later if needed -->
-
-  <!-- ✅ Bootstrap JS Bundle -->
+  <!-- ✅ Bootstrap JS Logic -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     const postView = document.getElementById("postView");
